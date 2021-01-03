@@ -1,0 +1,44 @@
+<section>
+  <div class="page-header">
+    <h1><span ng-bind="vm.job.title"></span> <small><span ng-bind="vm.job.location"></span></small></h1>
+    <p class="well" ng-bind="vm.job.job_description"></p>
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Company: </strong>{{vm.job.company}}</li>
+      <li class="list-group-item"><strong>Job Type: </strong>{{vm.job.job_type}}</li>
+      <li class="list-group-item"><strong>Contact Email: </strong>{{vm.job.contact_email}}</li>
+      <li class="list-group-item"><strong>Contact Website: </strong>{{vm.job.contact_website}}</li>
+      <li class="list-group-item"><strong>Contact Phone: </strong>{{vm.job.contact_phone}}</li>
+    </ul>
+
+    <div ng-if="vm.job.how_to_apply == 'website'">
+      <a class="btn btn-primary" target="_blank" href="{{vm.job.contact_website}}">Apply Now</a>
+    </div>
+    <div ng-if="vm.job.how_to_apply == 'email'">
+      <a class="btn btn-primary" target="_blank" href="mailto:{{vm.job.contact_email}}?Subject=Application">Apply Now</a>
+    </div>
+    <div ng-if="vm.job.how_to_apply == 'phone'">
+      <h4>Call To Apply: {{vm.job.contact_phone}}</h4>
+    </div>
+  </div>
+  <div class="pull-right"
+       ng-show="vm.job.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="jobs.edit({ jobId: vm.job._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="vm.job.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="vm.job.user"
+            ng-bind="vm.job.user.displayName"></span>
+      <span ng-if="!vm.job.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.job.content"></p>
+</section>
