@@ -1,0 +1,81 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.job._id ? 'Edit Job' : 'New Job'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.jobForm" class="form-horizontal" ng-submit="vm.save(vm.form.jobForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Job Title*</label>
+          <input name="name" type="text" ng-model="vm.job.title" id="title" class="form-control" placeholder="Title" required>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="company">Company*</label>
+          <input name="company" type="text" ng-model="vm.job.company" id="company" class="form-control" placeholder="Company" required>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="job_type">Job Type*</label>
+          <select name="job_type" ng-model="vm.job.job_type" id="job_type" class="form-control" required>
+            <option value=""> --- Please select --- </option>
+            <option value="Accounting">Accounting</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Banking">Banking</option>
+            <option value="Construction">Construction</option>
+            <option value="Education">Education</option>
+            <option value="Engineering">Engineering</option>
+            <option value="General Business">General Business</option>
+            <option value="Human Resources">Human Resources</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Legal">Legal</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Other">Other</option>
+            <option value="Retail">Retail</option>
+            <option value="Technology">Technology</option>
+            <option value="Telecommunications">Telecommunications</option>
+            <option value="Transportation">Transportation</option>
+          </select>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="location">Location*</label>
+          <input name="location" type="text" ng-model="vm.job.location" id="name" class="form-control" placeholder="Location" required>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="how_to_apply">How To Apply</label>
+          <div class="controls">
+              <input type="radio" ng-model="vm.job.how_to_apply" id="how_to_apply" value="email" checked> Email
+              <input type="radio" ng-model="vm.job.how_to_apply" id="how_to_apply" value="website"> Website
+              <input type="radio" ng-model="vm.job.how_to_apply" id="how_to_apply" value="phone"> Phone
+              <input type="radio" ng-model="vm.job.how_to_apply" id="how_to_apply" value="other"> Other
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="contact_email">Contact Email</label>
+          <input name="contact_email" type="text" ng-model="vm.job.contact_email" id="contact_email" class="form-control" placeholder="Contact Email">
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="contact_website">Contact Website</label>
+          <input name="contact_website" type="text" ng-model="vm.job.contact_website" id="contact_website" class="form-control" placeholder="Contact Website">
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="contact_phone">Contact Phone</label>
+          <input name="contact_phone" type="text" ng-model="vm.job.contact_phone" id="contact_phone" class="form-control" placeholder="Contact Phone">
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="job_description">Job Description</label>
+          <input name="job_description" type="text" ng-model="vm.job.job_description" id="job_description" class="form-control" placeholder="Job Description">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.job._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
