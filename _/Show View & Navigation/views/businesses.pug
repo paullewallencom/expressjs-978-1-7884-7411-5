@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Businesses
+  ul.listings
+    each business, i in businesses
+      li
+        a(href='/businesses/show/'+business.id) #{business.value.name}
+        br
+        | Location: #{business.value.city}, #{business.value.state}
+        br
+        | Phone: #{business.value.phone}

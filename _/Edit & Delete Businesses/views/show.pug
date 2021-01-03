@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  a(href="/businesses") << Go Back
+  br
+  h1 #{business.name}
+  ul
+    li Category: #{business.category}
+    li Website #{business.website}
+    li Phone #{business.phone}
+  hr
+  h5 Location Info
+  ul
+    li #{business.address}
+    li #{business.city}
+    li #{business.state}
+    li #{business.zip}
+
+  br
+  a.button(href="/businesses/edit/"+business._id) Edit
+
+  form(method="post", action="/businesses/delete/"+business._id)
+    input.button.alert(type="submit", value="Delete")

@@ -1,0 +1,30 @@
+<% include ../views/partials/header %>
+  <div class="grid">
+    <div class="col_9">
+      <h1><%= title %></h1>
+      <% medias.forEach(function(media){ %>
+        <div class="col_4">
+          <a href="#">
+            <img src="<%= media.images.low_resolution.url %>">
+            <small class="meta">Posted by <%= media.user.username %> on <%= formatDate(media.created_time) %></small>
+          </a>
+      </div>
+      <% }) %>
+    </div>
+    <div class="col_3">
+      <h5>Welcome, <br> <%= user.full_name %></h5>
+      <div class="redbox">
+        <h5>Posts</h5>
+        <h4><%= user.counts.media %></h4>
+      </div>
+      <div class="bluebox">
+        <h5>Following</h5>
+        <h4><%= user.counts.followed_by %></h4>
+      </div>
+      <div class="greenbox">
+        <h5>Followers</h5>
+        <h4><%= user.counts.follows %></h4>
+      </div>
+    </div>
+  </div>
+  <% include ../views/partials/footer %>

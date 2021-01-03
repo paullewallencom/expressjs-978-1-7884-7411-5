@@ -1,0 +1,69 @@
+{>"layouts/master" /}
+
+{<body}
+    <div class="row">
+      <a href="/movies">Go Back</a>
+      <h2>Edit Movie</h2>
+      <form method="post" action="/movies/edit/{movie._id}">
+        <div>
+          <label> Title *
+            <input type="text" name="title" placeholder="Add Title" value="{movie.title}">
+          </label>
+        </div>
+        <div>
+          <label> Release Date
+            <input id="release_date" type="date" name="release_date">
+          </label>
+        </div>
+        <div>
+          <label> Genre *
+            <select name="genre">
+                <option value="Action">Action</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Drama">Drama</option>
+                  <option value="Documentary">Documentary</option>
+                  <option value="Horror">Horror</option>
+                  <option value="Thriller">Thriller</option>
+                  <option value="Other">Other</option>
+              </select>
+          </label>
+        </div>
+        <div>
+          <label> Plot
+            <textarea name="plot" placeholder="Plot">{movie.plot}</textarea>
+          </label>
+        </div>
+        <div>
+          <label> Director
+            <input type="text" name="director" placeholder="Director"  value="{movie.director}">
+          </label>
+        </div>
+        <div>
+          <label> Cover URL
+            <input type="text" name="cover" placeholder="Image URL" value="{movie.cover}">
+          </label>
+        </div>
+        <div>
+          <label> Youtube Trailer Code
+            <input type="text" name="trailer" value="{movie.trailer}">
+          </label>
+        </div>
+        <div>
+          <input type="submit" class="button" value="Submit">
+        </div>
+        <input type="hidden" name="_csrf" value="{_csrf}">
+      </form>
+    </div>
+    <div class="hide" id="grab_date">{movie.release_date}</div>
+    <script>
+      var release_date = document.getElementById('grab_date').innerHTML;
+
+      Date.prototype.toDateInputValue = (function() {
+       var local = new Date(release_date);
+       local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+       return local.toJSON().slice(0,10);
+     });
+
+     document.getElementById('release_date').value =  new Date().toDateInputValue();
+    </script>
+{/body}

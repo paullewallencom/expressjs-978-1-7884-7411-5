@@ -1,0 +1,22 @@
+<% include ../views/partials/header %>
+  <div class="grid">
+    <div class="col_9">
+      <h1><%= title %></h1>
+    </div>
+    <div class="col_3">
+      <h5>Welcome, <br> <%= user.full_name %></h5>
+      <div class="redbox">
+        <h5>Posts</h5>
+        <h4><%= user.counts.media %></h4>
+      </div>
+      <div class="bluebox">
+        <h5>Following</h5>
+        <h4><%= user.counts.followed_by %></h4>
+      </div>
+      <div class="greenbox">
+        <h5>Followers</h5>
+        <h4><%= user.counts.follows %></h4>
+      </div>
+    </div>
+  </div>
+  <% include ../views/partials/footer %>

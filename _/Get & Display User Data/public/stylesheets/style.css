@@ -1,0 +1,24 @@
+body {
+  background:#f4f4f4;
+}
+
+.redbox, .bluebox,.greenbox{
+  padding: 10px 5px;
+  border: #ccc solid 1px;
+  text-align: center;
+}
+
+.redbox{
+  background: red;
+  color: #fff;
+}
+
+.bluebox{
+  background: blue;
+  color: #fff;
+}
+
+.greenbox{
+  background: green;
+  color: #fff;
+}

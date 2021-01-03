@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1 Add business
+  form(method="post", action="/businesses/add")
+    .row
+    .large-12.columns
+      label
+        | Business name
+        input(type="text", name="name", placeholder="Business Name")
+      label
+        | Category
+        select(name='category')
+              option(value='0') Select a Category
+              option(value='Accounting') Accounting
+              option(value='Construction') Construction
+              option(value='Education') Education
+              option(value='Food') Food
+              option(value='Healthcare') Healthcare
+              option(value='Real Estate') Real Estate
+              option(value='Technology') Technology
+              option(value='Other') Other
+      label
+        | Website
+        input(type="text", name="website", placeholder="Business Website")
+      label
+        | Phone Number
+        input(type="text", name="phone", placeholder="Phone Number")
+      label
+        | Street Address
+        input(type='text', name='address', placeholder='Street Address')
+      label
+        | City
+        input(type='text', name='city', placeholder='City')
+      label
+        | State
+        input(type='text', name='state', placeholder='State')
+      label
+        | Zipcode
+        input(type='text', name='zip', placeholder='Zip')
+      input.button(type="submit", value="Submit")

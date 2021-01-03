@@ -1,0 +1,33 @@
+doctype html
+head
+  title Real Time Chat
+  link(rel="stylesheet", href="/components/bootstrap/dist/css/bootstrap.css")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+  script(src="/components/bootstrap/dist/js/bootstrap.js")
+body
+  nav.navbar.navbar-inverse
+    .container
+      .navbar-header
+      a.navbar-brand(href="/") eChat
+  .container
+    .row
+      .col-md-8
+        #userFormWrap
+          h1 Create Username
+          form#userForm
+            input#username.form-control(type="text", placeholder="Enter Username...")
+            br
+            button.btn.btn-default(type="submit") Submit
+        #mainWrap
+          h1 Speak Your Mind
+          form#chatForm
+            .form-group
+              textarea#chatInput.form-control(name="body", placeholder="Say Something...")
+              br
+              button.btn.btn-default(type="submit") Submit
+              br
+              br
+      .col-md-4
+        h3 Chat Users
+        ul.list-group
+          #users

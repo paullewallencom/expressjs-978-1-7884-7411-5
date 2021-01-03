@@ -1,0 +1,28 @@
+<script>
+  function initMap(){
+    const lat = {{store.lat}};
+    const lng = {{store.lng}};
+    const myLatLng = {lat:lat, lng:lng};
+
+    const map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center:myLatLng
+    });
+
+    const marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map
+    });
+
+  }
+</script>
+<a href="/"><< Go Back</a>
+<h1>Store Details [{{store.id}}]</h1>
+<p>Address: {{store.address}}</p>
+<form id="delete-form" method="post" action="/store/delete/{{store.id}}?_method=DELETE">
+  <input type="submit" value="Delete Store">
+</form>
+<div id="map"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRjFNiYgh0KRQZfvDkjIqrUmyDF4cxRP0&callback=initMap"></script>

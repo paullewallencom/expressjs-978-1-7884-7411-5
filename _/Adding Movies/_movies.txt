@@ -1,0 +1,31 @@
+{
+	title:'Split',
+	genre:'Thriller',
+	plot:'After three girls are kidnapped by a man with 24 distinct personalities they must find some of the different personalities that can help them while running away and staying alive from the others.',
+	director:'M. Night Shayamalan',
+	release_date: new Date('2017-01-20'),
+	trailer:'84TouqfIsiI',
+	cover:'https://images-na.ssl-images-amazon.com/images/M/MV5BZTJiNGM2NjItNDRiYy00ZjY0LTgwNTItZDBmZGRlODQ4YThkL2ltYWdlXkEyXkFqcGdeQXVyMjY5ODI4NDk@._V1_UX182_CR0,0,182,268_AL_.jpg'
+}
+
+{
+	title:'xXx: Return of Xander Cage',
+	genre:'Action',
+	plot:'Xander Cage is left for dead after an incident, though he secretly returns to action for a new, tough assignment with his handler Augustus Gibbons.',
+	director:'D.J. Caruso',
+	release_date:new Date('2017-01-20'),
+	trailer:'-ziu6JzJTZ0',
+	cover:'https://images-na.ssl-images-amazon.com/images/M/MV5BMzcwMjkxMzQ3NV5BMl5BanBnXkFtZTgwMzgyNDA5MDI@._V1_SX214_AL_.jpg'
+}
+
+{
+	title:'Staying Vertical',
+	genre:'Drama',
+	plot:'A film maker has to raise a child by himself whilst looking for an inspiration for his new film.',
+	director:'Alain Guiraudie',
+	release_date:new Date('2017-01-20'),
+	trailer:'LNomhkx0-dc',
+	cover:'https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ3OTQyMzA3MV5BMl5BanBnXkFtZTgwMjEzMzIwMTI@._V1_UY268_CR0,0,182,268_AL_.jpg'
+}
+
+

@@ -1,0 +1,59 @@
+body{
+  background: #ccc;
+  font-family: arial;
+  color:#666;
+  line-height: 1.6em;
+}
+
+a{
+  color:#666;
+}
+
+.container{
+  margin:auto;
+  width:70%;
+  overflow:hidden;
+  background: #f4f4f4;
+  padding:20px;
+  border: 1px dotted #666;
+}
+
+input[type='text']{
+  padding:4px;
+  height:25px;
+  border:1px solid #ccc;
+}
+
+#input-id{
+  width: 20%;
+}
+
+#input-loc{
+  width:70%;
+}
+
+#submit{
+  padding:10px;
+  background:#333;
+  color:#fff;
+  border:0;
+  margin-top:20px;
+}
+
+.add{
+  float:right;
+}
+
+.clr{
+  clear:both;
+}
+
+#delete-form{
+  float:right;
+  margin:10px;
+}
+
+#map{
+  height: 400px;
+  width:100%;
+}

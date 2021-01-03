@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/bower_components/foundation/css/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    ul.errors
+      if errors
+        each error, i in errors
+          li.alert-box.alert #{error.msg}
+    block content

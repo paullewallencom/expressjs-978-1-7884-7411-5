@@ -1,0 +1,31 @@
+body {
+  background:#f4f4f4;
+}
+
+img{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:4px;
+  border-radius: 15px;
+}
+
+.redbox, .bluebox,.greenbox{
+  padding: 10px 5px;
+  border: #ccc solid 1px;
+  text-align: center;
+}
+
+.redbox{
+  background: red;
+  color: #fff;
+}
+
+.bluebox{
+  background: blue;
+  color: #fff;
+}
+
+.greenbox{
+  background: green;
+  color: #fff;
+}

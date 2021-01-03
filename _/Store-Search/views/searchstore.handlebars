@@ -1,0 +1,7 @@
+<form method="post" action="/store/search">
+  <div>
+    <label>Store ID: </label>
+    <input type="text" name="id" id="input-id"> {{#if error}} <span>{{error}}</span>{{/if}}
+  </div>
+  <button type="submit" id="submit">Submit</button>
+</form>

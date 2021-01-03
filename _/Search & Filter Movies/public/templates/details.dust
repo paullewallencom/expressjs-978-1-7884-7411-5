@@ -1,0 +1,33 @@
+{>"layouts/master" /}
+
+{<body}
+    <div class="row">
+      <a href="/movies">Go Back</a>
+      <br>
+      <h2>{movie.title}</h2>
+      <div class="columns large-4">
+        <img class="th" src="{movie.cover}">
+      </div>
+      <div class="columns large-8">
+        <ul class="side-nav">
+          <li><strong>Genre: </strong>{movie.genre}</li>
+          <li><strong>Release Date: </strong>{movie.release_date}</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <h3>Movie Plot</h3>
+      <p>{movie.plot}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h3>Trailer</h3>
+      <iframe width="600" height="315" src="https://www.youtube.com/embed/{movie.trailer}" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <br>
+    <a href="/movies/edit/{movie._id}">Edit</a> |
+    <a href="#" class="delete-movie" data-movie-id="{movie._id}" data-csrf="{_csrf}">Delete</a>
+    <br>
+{/body}
